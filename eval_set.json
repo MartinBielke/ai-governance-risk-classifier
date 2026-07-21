@@ -1,0 +1,107 @@
+[
+  {
+    "id": "case_01",
+    "description": "A government agency assigns citizens a trust score based on their social media activity and financial behavior, used to determine access to public services.",
+    "expected_tier": "unacceptable_risk",
+    "expected_ll144": false,
+    "note": "Textbook social scoring by a public authority."
+  },
+  {
+    "id": "case_02",
+    "description": "A retailer uses a recommendation engine to suggest products based on browsing history.",
+    "expected_tier": "minimal_risk",
+    "expected_ll144": false,
+    "note": "Standard recommender system, no sensitive decision authority."
+  },
+  {
+    "id": "case_03",
+    "description": "An NYC-based marketing agency uses an AI tool to screen resumes and automatically rank candidates before a human reviews the top 10%.",
+    "expected_tier": "high_risk",
+    "expected_ll144": true,
+    "note": "High-risk under Annex III (employment) AND triggers NY LL144 since it substantially assists hiring decisions in NYC."
+  },
+  {
+    "id": "case_04",
+    "description": "A bank uses a machine learning model to calculate credit scores that determine loan approval and interest rates.",
+    "expected_tier": "high_risk",
+    "expected_ll144": false,
+    "note": "Creditworthiness assessment is explicitly Annex III high-risk; not an employment tool so LL144 does not apply."
+  },
+  {
+    "id": "case_05",
+    "description": "A customer service chatbot answers FAQs about a software product and clearly discloses that users are speaking with an AI.",
+    "expected_tier": "limited_risk",
+    "expected_ll144": false,
+    "note": "Transparency-only obligation."
+  },
+  {
+    "id": "case_06",
+    "description": "A call center uses software to detect employees' emotional states during customer calls to flag those who seem stressed for a wellbeing check-in.",
+    "expected_tier": "unacceptable_risk",
+    "expected_ll144": false,
+    "note": "Adversarial case: framed as benign ('wellbeing'), but emotion recognition in the workplace is prohibited under Article 5, regardless of stated intent."
+  },
+  {
+    "id": "case_07",
+    "description": "A university uses an AI system to automatically grade essay exams and flag borderline cases for human review.",
+    "expected_tier": "high_risk",
+    "expected_ll144": false,
+    "note": "Education/exam scoring is an explicit Annex III category."
+  },
+  {
+    "id": "case_08",
+    "description": "A mobile game studio uses AI to generate procedural level layouts.",
+    "expected_tier": "minimal_risk",
+    "expected_ll144": false,
+    "note": "No decision-making about people; minimal risk."
+  },
+  {
+    "id": "case_09",
+    "description": "A Berlin-based company uses an AI tool internally to rank job applicants, but insists it is 'just a sorting tool' and a recruiter always makes the final call.",
+    "expected_tier": "high_risk",
+    "expected_ll144": false,
+    "note": "Adversarial case: 'human in the loop' framing doesn't downgrade risk tier if the tool substantially shapes candidate ranking; Annex III applies regardless of framing. LL144 doesn't apply (not NYC)."
+  },
+  {
+    "id": "case_10",
+    "description": "An app generates a photorealistic synthetic video of a public figure for satire, with a visible watermark disclosing it is AI-generated.",
+    "expected_tier": "limited_risk",
+    "expected_ll144": false,
+    "note": "Deepfake with proper disclosure = transparency obligation, not high-risk."
+  },
+  {
+    "id": "case_11",
+    "description": "A city police department uses a real-time facial recognition system on public street cameras to identify persons of interest.",
+    "expected_tier": "unacceptable_risk",
+    "expected_ll144": false,
+    "note": "Real-time remote biometric identification in public spaces for law enforcement; narrow exceptions require judicial authorization and don't apply to blanket surveillance."
+  },
+  {
+    "id": "case_12",
+    "description": "An NYC staffing agency uses an AI-powered platform to filter out candidates whose resumes fall below a fit score before any human sees them.",
+    "expected_tier": "high_risk",
+    "expected_ll144": true,
+    "note": "Fully automated filtering before human review — a stronger LL144 trigger than case_03."
+  },
+  {
+    "id": "case_13",
+    "description": "A logistics company uses AI to forecast warehouse demand for the next quarter.",
+    "expected_tier": "minimal_risk",
+    "expected_ll144": false,
+    "note": "No impact on individuals' rights; minimal risk."
+  },
+  {
+    "id": "case_14",
+    "description": "An insurance company uses AI to categorize applicants' biometric data (e.g., inferred age or gender from a photo) as part of underwriting, disclosed in the terms of service.",
+    "expected_tier": "high_risk",
+    "expected_ll144": false,
+    "note": "Biometric categorization tied to a consequential decision (underwriting) is high-risk, not merely limited-risk; disclosure alone isn't sufficient."
+  },
+  {
+    "id": "case_15",
+    "description": "A hospital uses an AI triage tool to help prioritize which patients see a doctor first in the ER, with a nurse able to override at any time.",
+    "expected_tier": "high_risk",
+    "expected_ll144": false,
+    "note": "Not in the eval's explicit Annex III list used here, but analogous to critical-infrastructure/safety-component reasoning — included to test whether the classifier over-relies on the exact keyword list vs. reasoning by analogy."
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "eu_ai_act_tiers": {
+    "unacceptable_risk": {
+      "description": "Prohibited practices under Article 5 (in force since Feb 2025).",
+      "examples": [
+        "Social scoring by public authorities",
+        "Real-time remote biometric identification in public spaces for law enforcement (with narrow exceptions)",
+        "Emotion recognition in the workplace or education settings",
+        "Untargeted scraping of facial images to build recognition databases",
+        "Manipulative or subliminal techniques causing significant harm",
+        "Exploitation of vulnerabilities (age, disability, socio-economic situation)"
+      ]
+    },
+    "high_risk": {
+      "description": "Annex III use cases — subject to conformity assessment, risk management, human oversight, logging, and technical documentation obligations.",
+      "examples": [
+        "Recruitment: CV screening, candidate ranking, interview analysis",
+        "Employment: promotion/termination decisions, task allocation, performance monitoring",
+        "Creditworthiness / credit scoring",
+        "Essential public services eligibility (e.g., social benefits)",
+        "Biometric categorization (non-prohibited use)",
+        "Critical infrastructure safety components",
+        "Education: exam scoring, admission decisions",
+        "Law enforcement risk assessment tools",
+        "Migration/asylum/border control eligibility assessment"
+      ]
+    },
+    "limited_risk": {
+      "description": "Transparency obligations only (Article 50) — must disclose AI interaction or generated/manipulated content.",
+      "examples": [
+        "General-purpose chatbots without high-risk decision authority",
+        "Deepfake / synthetic media generation (with disclosure)",
+        "Emotion recognition outside prohibited contexts",
+        "Biometric categorization systems disclosed to users"
+      ]
+    },
+    "minimal_risk": {
+      "description": "No specific obligations under the Act.",
+      "examples": [
+        "Spam filters",
+        "Recommender systems for non-sensitive content",
+        "Inventory/demand forecasting",
+        "AI-enabled video games"
+      ]
+    }
+  },
+  "nist_ai_rmf_functions": {
+    "GOVERN": "Establish accountability structures, policies, and risk tolerance before/around the AI lifecycle.",
+    "MAP": "Establish context: identify the use case, stakeholders, and potential impacts/risks.",
+    "MEASURE": "Assess, benchmark, and monitor risks (bias testing, robustness, performance) with appropriate metrics.",
+    "MANAGE": "Prioritize and respond to risks; allocate resources; plan for incident response and decommissioning."
+  },
+  "ny_local_law_144": {
+    "description": "Applies specifically to Automated Employment Decision Tools (AEDTs) used by NYC employers to substantially assist or replace discretionary hiring/promotion decisions.",
+    "trigger_conditions": [
+      "Tool is used to screen, score, or rank candidates for hiring or promotion",
+      "Tool's output is used to substantially assist or replace human decision-making (not merely one minor input among many)",
+      "Employer/employment agency is located in or hiring for a position in New York City"
+    ],
+    "if_triggered_requires": [
+      "Independent bias audit within the prior year",
+      "Public posting of a summary of the bias audit results",
+      "Advance notice to candidates/employees",
+      "Disclosure of data retention/type collected upon request"
+    ]
+  }
+}
